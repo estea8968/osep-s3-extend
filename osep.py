@@ -15,8 +15,9 @@ from PyQt5.QtGui import QIcon, QPixmap
 now_path = os.path.abspath(os.getcwd())
 
 global def_url 
-def_url = 'https://estea8968.github.io/s4a_scratch3/'
+def_url = 'https://jycs.page.link/osep-editor'
 def_classurl = 'https://jycs.page.link/osep-course'
+def_abouturl = 'https://jycs.page.link/osep-about'
 #def_url = 'https://mryslab.github.io/s3onegpio/'
 global def_offline 
 ##全域變數連接port
@@ -145,7 +146,7 @@ class ComboWidget(QtWidgets.QWidget):
         self.top = 100
         self.width = 800 
         self.height = 360
-
+        self.setMaximumSize(800,360)
         self.initUI()
     
     def initUI(self):
@@ -391,7 +392,8 @@ class ComboWidget(QtWidgets.QWidget):
 
 
     def b_about_clicked(self):
-        QMessageBox.information(self,'About','Name: Chen estea \n Email:estea8968@gmail.com \n url:https://github.com/estea8968/osep-s3-extend/blob/master/LICENSE')
+        os.system(def_browser+' '+def_abouturl)
+        ##QMessageBox.information(self,'About','Name: Chen estea \n Email:estea8968@gmail.com \n url:https://github.com/estea8968/osep-s3-extend/blob/master/LICENSE')
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
