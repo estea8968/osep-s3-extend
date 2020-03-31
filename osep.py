@@ -32,7 +32,7 @@ now_path = os.path.abspath(os.getcwd())
 
 if serial.sys.platform.startswith('win'):
     os_name = 'win'
-    path_dir = 'C:\Program Files (x86)\s3-extend-tool'
+    path_dir = 'C:\Program Files (x86)\osep-s3-extend'
     cpx_sh_name = 'cpx_firmata.bat'
     def_browser = 'start'
     exe_s3a = 'start s3a'
@@ -44,10 +44,10 @@ if serial.sys.platform.startswith('win'):
     exe_b_esp8266 = '"'+path_dir+'\\chk_burn_esp8266.bat" '
     exe_b_cpx = '"'+path_dir+'\\cpx_firmata.bat" '
     exe_clear = 'taskkill /f /im python.exe'
-    def_offline = '"C:\Program Files (x86)\s4a_scratch3\s4a_scratch3.exe"'
+    def_offline = '"C:\Program Files (x86)\osep_scratch3\osep_scratch3.exe"'
 elif serial.sys.platform.startswith('linux'):
     os_name = 'linux'
-    path_dir = '/opt/s3-extend-tool'
+    path_dir = '/opt/osep-s3-extend'
     cpx_sh_name = 'cpx_firmata.sh'
     def_browser = 'browse'
     exe_s3a ='gnome-terminal -- s3a '
@@ -59,11 +59,11 @@ elif serial.sys.platform.startswith('linux'):
     exe_b_esp8266 =path_dir+'/firmware/esp8266/burn_esp8266.sh '
     exe_b_cpx = path_dir+'/cpx_firmata.sh'
     exe_clear = 'killall python'
-    def_offline = path_dir+'/../s4a_scratch3/scratch3'
+    def_offline = path_dir+'/../osep_scratch3/scratch3'
 elif serial.sys.platform.startswith('cygwin'):
         # this excludes your current terminal "/dev/tty"
     os_name = 'cygwin'
-    path_dir = '/opt/s3-extend-tool'
+    path_dir = '/opt/osep-s3-extend'
     def_browser = 'browse'
     exe_s3a = 'gnome-terminal -- s3a '
     exe_s3c = 'gnome-terminal -- s3c'
@@ -74,7 +74,7 @@ elif serial.sys.platform.startswith('cygwin'):
     #exe_b_esp8266 ='gnome-terminal -- /opt/s3-extend-tool/firmware/esp8266/burn_esp8266.sh '
     exe_b_esp8266 =path_dir+'/firmware/esp8266/burn_esp8266.sh '
     exe_b_cpx = path_dir+'/cpx_firmata.sh '
-    def_offline = path_dir+'/../s4a_scratch3/scratch3'
+    def_offline = path_dir+'/../osep_scratch3/scratch3'
 elif sys.platform.startswith('darwin'):
     os_name = 'mac'
     path_dir = '/User'
@@ -87,7 +87,7 @@ elif sys.platform.startswith('darwin'):
     exe_b_uno = path_dir+'uno_firmata_mac.sh'
     exe_b_esp8266 =path_dir+'burn_esp8266_mac.sh'
     exe_b_cpx = path_dir+'cpx_firmata_mac.sh'
-    def_offline = 's4a_scratch3'
+    def_offline = 'osep_scratch3'
 else:
     os_name = 'other'
     path_dir = ''

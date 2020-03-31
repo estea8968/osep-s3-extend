@@ -1,6 +1,6 @@
 @echo off
 chcp 65001
-cd "C:\Program Files (x86)\s3-extend-tool\firmware\esp8266"
+cd "C:\Program Files (x86)\osep-s3-extend\firmware\esp8266"
 
 :start
 rem ##set /p echo u_choice="choice (1:burn firmware 2:set wifi ssid password): "

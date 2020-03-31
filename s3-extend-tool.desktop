@@ -1,9 +1,9 @@
 [Desktop Entry]
 Type=Application
-Version=0.1.1
-Desktop_dir=/opt/s3-txtend-tool
-Name=s3-extend-tool 
-Comment=s3-extend-tool
-Icon=/opt/s3-extend-tool/images/s4a_scratch3.png
-Exec=/usr/bin/s3-extend-tool
+Version=1.0.1
+Desktop_dir=/opt/osep-s3-txtend
+Name=osep-s3-extend 
+Comment=osep-s3-extend
+Icon=/opt/osep-s3-extend/images/osep.png
+Exec=/usr/bin/osep-s3-extend
 Terminal=true
