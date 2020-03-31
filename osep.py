@@ -137,7 +137,7 @@ def serial_ports():
 class ComboWidget(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
-        self.title = os_name+":OSEP控制台 v:1.01"
+        self.title = os_name+":OSEP控制台 v:"+version
         #背景圖
         self.pixmap = QPixmap('images/osep.png')
 
@@ -157,13 +157,13 @@ class ComboWidget(QtWidgets.QWidget):
         comboA = QtWidgets.QComboBox(self)
         comboB = QtWidgets.QComboBox(self)
         #comboA.setGeometry(QtCore.QRect(400, 180, 200, 50))
-        comboA.setGeometry(400, 210, 150, 80)
+        comboA.setGeometry(400, 200, 150, 80)
         comboB.setGeometry(20, 300, 220, 40)
         layoutA = QtWidgets.QVBoxLayout(comboA)
         layoutB = QtWidgets.QVBoxLayout(comboB)
 
-        comboA.setStyleSheet("font: 20px; border-style: outset; border-width:1px ; border-color: rbg(128,128,128); color:rgb(0,0,255); background-color: rgb(255,255,255);");
-        comboB.setStyleSheet("font: 20px; border-style: outset; border-width:1px ; border-color: rbg(128,128,128); color:rgb(255,0,0); background-color: rgb(255,255,255);");
+        comboA.setStyleSheet("font: 20px; border-style: outset; border-width:0px ; border-color: rbg(128,128,128); color:rgb(0,0,0); background-color: rgb(255,255,255);");
+        comboB.setStyleSheet("font: 20px; border-style: outset; border-width:0px ; border-color: rbg(128,128,128); color:rgb(0,0,0); background-color: rgb(255,255,255);");
         comboA.addItem("選擇連線硬體")
         comboA.addItem("Arduino")
         comboA.addItem("Circuit")
@@ -192,7 +192,7 @@ class ComboWidget(QtWidgets.QWidget):
         l_A = QLabel("連接硬體功能",self)
         l_A.setAlignment(QtCore.Qt.AlignCenter)
         l_A.resize(150,35)
-        l_A.setStyleSheet("font: 20px; border-style: outset; border-width:1px ; border-color: rbg(128,128,128); text-align:center; color:rgb(255,0,255); background-color: rgb(255,255,255);");
+        l_A.setStyleSheet("font: 20px;text-align:center; color:rgb(255,255,255); background-color: rgb(233,0,125);");
         l_A.move(400,300)
         l_B = QLabel('',self)
         l_B.setPixmap(self.pixmap)
@@ -203,7 +203,7 @@ class ComboWidget(QtWidgets.QWidget):
         l_C.move(250,300)
         l_C.setAlignment(QtCore.Qt.AlignCenter) #//*置中*/
         l_C.resize(120,35)
-        l_C.setStyleSheet("font: 20px; text-align:center; border-style: outset; border-width:1px ; border-color: rbg(128,128,128); color:rgb(255,0,255); background-color: rgb(255,255,255);");
+        l_C.setStyleSheet("font: 20px;text-align:center; color:rgb(255,255,255); background-color: rgb(233,0,125);");
 
         l_D =QLabel('開始創作',self)
         l_D.setAlignment(QtCore.Qt.AlignLeft)
@@ -226,7 +226,7 @@ class ComboWidget(QtWidgets.QWidget):
 
         b_port = QPushButton("連接埠",self)
         b_port.resize(120,35)
-        b_port.setStyleSheet("font: 20px; text-align:center; color:rgb(255,0,255); background-color: rgb(255,255,255);");
+        b_port.setStyleSheet("font: 20px;text-align:center; color:rgb(255,255,255); background-color: rgb(233,0,125);");
         b_port.setToolTip("偵測設備port")
         b_port.move(250,200)
         b_port.clicked.connect(self.b_port_clicked)
@@ -252,14 +252,14 @@ class ComboWidget(QtWidgets.QWidget):
         b_class.setStyleSheet("font: 20px;text-align:center; color:rgb(255,255,255); background-color: rgb(233,0,125);");
         b_class.setToolTip("瀏覽器開啟OSEP課程資源")
         b_class.resize(150,35)
-        b_class.move(600,210)
+        b_class.move(600,200)
         b_class.clicked.connect(self.b_class_clicked)
 
         b_url = QPushButton("OSEP線上操作",self)
         b_url.setStyleSheet("font: 20px;text-align:center; color:rgb(255,255,255); background-color: rgb(233,0,125);");
         b_url.setToolTip("瀏覽器開啟OSEP線上操作網站")
         b_url.resize(150,35)
-        b_url.move(600,255)
+        b_url.move(600,250)
         b_url.clicked.connect(self.b_url_clicked)
 
         b_offline = QPushButton("OSEP離線操作",self)
@@ -279,7 +279,7 @@ class ComboWidget(QtWidgets.QWidget):
         b_about = QPushButton("關於OSEP",self)
         b_about.setToolTip("關於OSEP")
         b_about.resize(150,35)
-        b_about.setStyleSheet("font: 20px; color: rgb(128,128,128);  text-align::center; background-color: rgb(255,255,255);");
+        b_about.setStyleSheet("font: 20px; color: rgb(128,128,128);  text-align::center; ");
         b_about.move(600,20)
         b_about.clicked.connect(self.b_about_clicked)
         
