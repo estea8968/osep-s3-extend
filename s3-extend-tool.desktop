@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=0.1.1
+Desktop_dir=/opt/s3-txtend-tool
+Name=s3-extend-tool 
+Comment=s3-extend-tool
+Icon=/opt/s3-extend-tool/images/s4a_scratch3.png
+Exec=/usr/bin/s3-extend-tool
+Terminal=true

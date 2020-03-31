@@ -1,0 +1,4 @@
+#!/bin/bash
+d_port="/dev/ttyUSB0"
+ssid="myAP"
+password="12345678"
